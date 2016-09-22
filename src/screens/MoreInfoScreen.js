@@ -16,6 +16,12 @@ import {connect} from 'react-redux';
 import { movies } from '../services/data.json';
 
 const movie = movies[0];
+const colors = {
+  red0: '#992820',
+  red1: '#682825',
+  yellow: '#F2DCAB'
+}
+
 
 const posterWidth = Dimensions.get('window').width;
 const PARALLAX_HEADER_HEIGHT = 350;
@@ -27,7 +33,7 @@ class MoreInfoScreen extends Component {
     return (
       <ParallaxScrollView
         backgroundColor="blue"
-        contentBackgroundColor="pink"
+        contentBackgroundColor={colors.red1}
         parallaxHeaderHeight={300}
         renderBackground={() => (
           <View key="background">
@@ -46,18 +52,22 @@ class MoreInfoScreen extends Component {
           <View style={{ height: 300, flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           </View>
         )}>
-        <View style={{ height: 500 }}>
-          <Text>
-            Scroll me
-            Scroll me
-            Scroll meScroll me
-            Scroll meScroll meScroll meScroll meScroll meScroll me
-            Scroll me
-            Scroll me
-            Scroll me
-            Scroll me
-
-          </Text>
+        <View>
+          <View style={styles.title}>
+            <Text style={styles.titleText}>
+              {movie.title}
+            </Text>
+          </View>
+          <View style={{
+            marginHorizontal: 30
+          }}>
+            <Text style={styles.detailHeadline}>
+              DESCRIPTION
+            </Text>
+            <Text style={styles.detailText}>
+              {movie.synopsis}
+            </Text>
+          </View>
         </View>
       </ParallaxScrollView>
   );
@@ -81,6 +91,24 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  title: {
+    backgroundColor: colors.yellow
+  },
+  titleText: {
+    marginVertical: 20,
+    marginLeft: 30,
+    fontWeight: '900',
+    fontSize: 17,
+    color: colors.red1
+  },
+  detailHeadline: {
+    color: colors.yellow,
+    fontWeight: '700',
+    marginVertical: 10,
+  },
+  detailText: {
+    color: colors.yellow
+  }
 });
 
 function mapStateToProps(state) {

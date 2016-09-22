@@ -35,6 +35,11 @@ export default class App {
           label: 'To Watch',
           screen: 'MovieHack.ToWatchTabScreen',
           title: 'To Watch',
+        },
+        {
+          label: 'Test More Info Screen',
+          screen: 'MovieHack.MoreInfoScreen',
+          title: 'Movie Info',
         }
       ]
     });
