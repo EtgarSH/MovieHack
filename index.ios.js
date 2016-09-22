@@ -1,4 +1,4 @@
 import App from './src/app';
 
 const app = new App();
-app.startApp()
+app.startApp();

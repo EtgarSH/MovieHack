@@ -4,7 +4,7 @@
  * @flow
  */
 
-import {Navigation} from 'react-native-navigation';
+import { Navigation } from 'react-native-navigation';
 
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
@@ -13,10 +13,10 @@ import * as reducers from './reducers';
 import {registerScreens} from './screens';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-const reducer = combineReducers(reducers)
-const store = createStoreWithMiddleware(reducer)
+const reducer = combineReducers(reducers);
+const store = createStoreWithMiddleware(reducer);
 
-registerScreens(store, Provider)
+registerScreens(store, Provider);
 
 export default class App {
   constructor() {
