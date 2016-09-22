@@ -1,5 +1,6 @@
 import * as types from './actionTypes';
 import Immutable from 'seamless-immutable';
+import _ from 'lodash';
 
 const initialState = Immutable({
   movies: []
@@ -7,6 +8,8 @@ const initialState = Immutable({
 
 export default function counter(state = initialState, action = {}) {
   switch (action.type) {
+    case types.MOVIES_LOADING_STARTED:
+      return state.merge({movies: action.movies})
 
     default:
       return state;

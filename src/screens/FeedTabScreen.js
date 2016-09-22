@@ -15,20 +15,23 @@ import _ from 'lodash';
 
 
 class FeedTabScreen extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showedMovieIndex: 0,
+    };
+  }
+
+  componentWillMount() {
+    this.props.dispatch(feedActions.fetchMoviesAction())
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <ScrollView style={styles.container}>
+        <Text>{_.get(this.props.feed.movies[this.state.showedMovieIndex], 'title')}</Text>
+      </ScrollView>
     );
   }
 }
@@ -36,8 +39,6 @@ class FeedTabScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
@@ -53,7 +54,9 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps(state) {
-  return state;
+  return {
+    feed: state.feed,
+  }
 }
 
 export default connect(mapStateToProps)(FeedTabScreen);

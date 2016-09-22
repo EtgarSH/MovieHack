@@ -1,0 +1,48 @@
+{"movies": [
+      {
+          "id":"771442750",
+          "title":"Batman: The Killing Joke",
+          "year":2016,
+          "runtime":72,
+          "release_dates":{
+              "theater":"2016-07-25",
+              "dvd":"2016-08-02"
+            },
+          "synopsis":"Fathom Events, Warner Bros. and DC Comics invite you to a premiere event when Batman: The Killing Joke comes to select cinemas nationwide for a special one-night event including an introduction from Mark Hamill plus two never-before-seen featurettes. Based on the acclaimed DC Comics graphic novel, take a journey into the dark psyche of the Clown Prince of Crime. Now escaped from Arkham Asylum, The Joker sets out to prove that one bad day can make anyone just as insane as he is. Featuring the return of Kevin Conroy as Batman, Mark Hamill as The Joker and Tara Strong as Batgirl, witness the birth of a super villain, the fortitude of a hero and the punchline that will leave you speechless!",
+          "posters":{
+              "thumbnail":"https://resizing.flixster.com/nsAcy8hu0lQ3jluw894IrZFiQXk=/54x76/v1.bTsxMTg5NTQ1ODtqOzE3MTI1OzIwNDg7Mzk4OzU2Mg",
+              "profile":"https://resizing.flixster.com/nsAcy8hu0lQ3jluw894IrZFiQXk=/54x76/v1.bTsxMTg5NTQ1ODtqOzE3MTI1OzIwNDg7Mzk4OzU2Mg",
+              "detailed":"https://resizing.flixster.com/nsAcy8hu0lQ3jluw894IrZFiQXk=/54x76/v1.bTsxMTg5NTQ1ODtqOzE3MTI1OzIwNDg7Mzk4OzU2Mg",
+              "original":"https://resizing.flixster.com/nsAcy8hu0lQ3jluw894IrZFiQXk=/54x76/v1.bTsxMTg5NTQ1ODtqOzE3MTI1OzIwNDg7Mzk4OzU2Mg"
+          },
+          "abridged_cast":[
+              {
+                  "name":"Kevin Conroy",
+                  "id":"162666466",
+                  "characters":[
+                      "Bruce Wayne/Batman"
+                  ]
+              },
+              {
+                  "name":"Mark Hamill",
+                  "id":"162665747",
+                  "characters":[
+                      "The Joker"
+                  ]
+              },
+              {
+                  "name":"Ray Wise",
+                  "id":"162689781",
+                  "characters":[
+                      "Commissioner James Gordon"
+                  ]
+              },
+              {
+                  "name":"Tara Strong",
+                  "id":"162656146",
+                  "characters":[
+                      "Batgirl/Barbara Gordon"
+                  ]
+              }
+            ]
+          }]}
