@@ -9,6 +9,9 @@ import {
   Platform
 } from 'react-native';
 
+import MovieView from '../components/MovieView';
+import LoadingView from '../components/LoadingView';
+
 import {connect} from 'react-redux';
 import * as feedActions from '../reducers/feed/actions';
 import _ from 'lodash';
@@ -23,15 +26,21 @@ class FeedTabScreen extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.dispatch(feedActions.fetchMoviesAction())
   }
 
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <Text>{_.get(this.props.feed.movies[this.state.showedMovieIndex], 'title')}</Text>
-      </ScrollView>
+      <View style={styles.container}>
+        {this.props.feed.movies.length === 0 ? <LoadingView /> :
+          <View>
+            <MovieView
+              movie={this.props.feed.movies[this.state.showedMovieIndex]}
+            />
+          </View>
+        }
+      </View>
     );
   }
 }

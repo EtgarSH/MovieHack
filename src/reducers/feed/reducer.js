@@ -8,7 +8,7 @@ const initialState = Immutable({
 
 export default function counter(state = initialState, action = {}) {
   switch (action.type) {
-    case types.MOVIES_LOADING_STARTED:
+    case types.MOVIES_LOADED:
       return state.merge({movies: action.movies})
 
     default:

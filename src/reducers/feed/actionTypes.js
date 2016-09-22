@@ -1,2 +1,1 @@
-export const MOVIES_LOADING_STARTED = "MovieHack.feed.MOVIES_LOADING_STARTED"
-export const MOVIES_LOADING_DONE = "MovieHack.feed.MOVIES_LOADING_DONE"
+export const MOVIES_LOADED = "MovieHack.feed.MOVIES_LOADED";
